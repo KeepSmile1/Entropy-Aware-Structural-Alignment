@@ -1,0 +1,11 @@
+torch
+torchvision
+transformers
+accelerate
+peft
+einops
+numpy=
+pillow
+opencv-python
+tqdm
+matplotlib

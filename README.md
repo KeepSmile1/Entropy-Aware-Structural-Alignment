@@ -26,11 +26,11 @@ The project relies on the following key dependencies. All required packages are 
 Follow the steps below to set up the running environment:
 
 1. Create a conda virtual environment (recommended to avoid dependency conflicts):
-        `conda create -n <your_env_name> python=3.8
-conda activate <your_env_name>`
+        conda create -n <your_env_name> python=3.8
+        conda activate <your_env_name>
 
 2. Install all required packages using pip:
-        `pip install -r requirements.txt`
+        pip install -r requirements.txt
 
 ## Training
 
@@ -39,9 +39,9 @@ The training process is straightforward. Follow these steps to start training:
 1. **Modify Configuration**: Edit the configuration file (located in the `config.py`) to set experimental parameters, such as dataset path, model hyperparameters, training epochs, learning rate, and experiment name (`exp_name`). 
 
 2. **Start Training**: Use the following command to start distributed training. If you have a different number of GPUs, adjust the `--nproc_per_node` parameter accordingly:
-        `torchrun --nproc_per_node=4 train.py`
+        torchrun --nproc_per_node=4 train.py
 Alternatively, you can use the provided shell script for one-click training:
-        `bash run.sh`
+        bash run.sh
 
 ## Results
 
@@ -51,7 +51,7 @@ All training results are automatically saved in the specified directory, which i
 ./history/config['exp_name']
 ├── record.txt            # Final result of each epoch
 ├── train_log.txt         # Training process
-├── result_file*.txt      # The 
+├── result_file*.txt      # The character inference result
 └── Other backups
 ```
 
